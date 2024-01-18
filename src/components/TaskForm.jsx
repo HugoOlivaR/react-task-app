@@ -18,7 +18,7 @@ export function TaskForm({createTask}) {
     }
 
   return (
-    <form onSubmit={handleSubmit} className='bg-slate-400 grid p-5 w-80 rounded-md mx-auto mb-10'>
+    <form onSubmit={handleSubmit} className='bg-slate-400 grid p-5 w-96 rounded-md m-3 mb-10'>
       <h2 className='text-center text-gray-700 text-2xl mb-4 uppercase font-bold'>Añadir nueva tarea</h2>
       <input
       className='m-2 bg-transparent border-2 rounded-sm focus:outline-none border-gray-700 p-1 placeholder:text-gray-600'

@@ -7,7 +7,7 @@ export function TaskList({tasks, deleteTask}) {
   }
   
   return (
-    <div className='grid grid-cols-3'>
+    <div className='grid grid-cols-4'>
       {tasks.map((task) => (
         <Taskard key={task.id} task={task} deleteTask={deleteTask}/>
       ))}
