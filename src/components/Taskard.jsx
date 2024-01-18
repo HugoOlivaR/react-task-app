@@ -5,7 +5,7 @@ function Taskard({ task, deleteTask }) {
       <p className="text-sm">{task.description}</p>
       <button
         onClick={() => deleteTask(task.id)}
-        className="mt-5 border-2 anim text-red-600 rounded-md border-red-600 hover:border-red-400 ease-in duration-100">
+        className="mt-5 border-2 text-red-600 rounded-md border-red-600 hover:border-red-400 ease-in duration-100">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
