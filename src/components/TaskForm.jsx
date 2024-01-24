@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { LangContext } from '../config/LangContext';
+import {lightTaskForm, darkTaskForm} from '../style/theme';
 import es from "../lang/es.json";
 import en from "../lang/en.json";
 
@@ -23,7 +24,7 @@ export function TaskForm({ createTask }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-slate-400 grid p-5 w-96 rounded-md m-3 mb-10"
+      className="bg-slate-400 grid border-solid border-2 border-gray-800 p-5 w-96 rounded-md m-3 mb-10"
     >
       <h2 className="text-center text-gray-700 text-2xl mb-4 uppercase font-bold">
         {langObj.title}
