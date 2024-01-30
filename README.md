@@ -31,4 +31,4 @@ Contributions to zentunes are welcome! Please read our contributing guidelines f
 - Thanks to all contributors who have helped to build and improve zentunes.
 
 ## Preview
-<img src="[https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.sv](https://media.discordapp.net/attachments/1032760837649223771/1201947006814392380/image.png?ex=65cbab61&is=65b93661&hm=65b63f0d52059084c5c2f507117b8f8ad0f9ed60ff6d6c0716eef3c08f53e096&=&format=webp&quality=lossless&width=1086&height=611)https://media.discordapp.net/attachments/1032760837649223771/1201947006814392380/image.png?ex=65cbab61&is=65b93661&hm=65b63f0d52059084c5c2f507117b8f8ad0f9ed60ff6d6c0716eef3c08f53e096&=&format=webp&quality=lossless&width=1086&height=611g" width="100%" height="auto" alt="app">  
+<img src="https://media.discordapp.net/attachments/1032760837649223771/1201947006814392380/image.png?ex=65cbab61&is=65b93661&hm=65b63f0d52059084c5c2f507117b8f8ad0f9ed60ff6d6c0716eef3c08f53e096&=&format=webp&quality=lossless&width=1086&height=611" width="100%" height="auto" alt="app">  
