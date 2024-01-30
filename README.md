@@ -17,8 +17,8 @@ react-task-app is a web-based application crafted with a blend of technologies i
 
 To get started with reack-task-app:
 
-1. **Clone the Repository**: `git clone https://github.com/HugoOlivaR/zentunes.git`
-2. **Navigate to the Project Directory**: `cd zentunes`
+1. **Clone the Repository**: `git clone https://github.com/HugoOlivaR/react-task-app.git`
+2. **Navigate to the Project Directory**: `cd react-task-app`
 3. **Install Dependencies**: ```npm install```
 4. **Run the Application**: ```npm run dev```
 
