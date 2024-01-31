@@ -8,4 +8,7 @@ const lightSideMenu =  "p-4 bg-yellow-100 border border-solid border-2 border-gr
 const darkTaskForm = "bg-slate-400 grid border-solid border-2 border-gray-800 p-5 w-96 rounded-md m-3 mb-10"
 const lightTaskForm = "bg-yellow-100 grid border-solid border-2 border-gray-800 p-5 w-96 rounded-md m-3 mb-10"
 
-export{darkSideMenu, lightSideMenu, darkMain, lightMain, darkTaskForm, lightTaskForm}
+const darkNoTaskText = "text-center text-2xl font-bold text-gray-200"
+const lightNoTaskText = "text-center text-2xl font-bold text-gray-800"
+
+export{darkSideMenu, lightSideMenu, darkMain, lightMain, darkTaskForm, lightTaskForm, darkNoTaskText, lightNoTaskText}

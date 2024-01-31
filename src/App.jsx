@@ -13,13 +13,12 @@ function App() {
 
   const switchTheme = () => {
     if(theme === "dark"){
-        document.getElementById('main').className = lightMain;
         setTheme("light")
     }else{
-        document.getElementById('main').className = darkMain;
         setTheme("dark")    
     }
   }
+
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -45,17 +44,17 @@ function App() {
   return (
     <ThemeContext.Provider value={[theme, setTheme]}>
       <LangContext.Provider value={{ lang, setLang }}>
-        <main className={darkMain} id="main">
+        <main className={theme === 'light' ? lightMain : darkMain} id="main">
           <div className="container mx-auto w-4/4">
             <header className="grid grid-cols-2">
               <div className="col-span-1">
-                <TaskForm createTask={createTask} />
+                <TaskForm createTask={createTask} theme={theme} />
               </div>
               <nav className="col-span-1">
-                <SideMenu switchTheme={switchTheme} />
+                <SideMenu switchTheme={switchTheme}/>
               </nav>
             </header>
-            <TaskList tasks={tasks} deleteTask={deleteTask} />
+            <TaskList tasks={tasks} deleteTask={deleteTask} theme={theme} />
           </div>
         </main>
       </LangContext.Provider>

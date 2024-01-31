@@ -4,7 +4,7 @@ import {lightTaskForm, darkTaskForm} from '../style/theme';
 import es from "../lang/es.json";
 import en from "../lang/en.json";
 
-export function TaskForm({ createTask }) {
+export function TaskForm({ createTask, theme }) {
   var { lang } = useContext(LangContext);
   const langObj = lang === "es" ? es : en;
   const [title, setTitle] = useState("");
@@ -24,7 +24,7 @@ export function TaskForm({ createTask }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-slate-400 grid border-solid border-2 border-gray-800 p-5 w-96 rounded-md m-3 mb-10"
+      className={theme === 'light' ? lightTaskForm : darkTaskForm}
     >
       <h2 className="text-center text-gray-700 text-2xl mb-4 uppercase font-bold">
         {langObj.title}

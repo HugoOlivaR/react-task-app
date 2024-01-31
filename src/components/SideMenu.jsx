@@ -4,7 +4,7 @@ import { LangContext } from "../config/LangContext";
 import { darkSideMenu, lightSideMenu } from "../style/theme";
 import { ThemeContext } from "../config/ThemeContext";
 
-const SideMenu = ({ switchTheme }) => {
+const SideMenu = ({switchTheme}) => {
   var [theme] = useContext(ThemeContext);
   var { lang, setLang } = useContext(LangContext);
 
@@ -17,28 +17,14 @@ const SideMenu = ({ switchTheme }) => {
       setLang("es");
     }
   };
-  function switchBtnTheme() {
-    if (theme === "dark") {
-      document.getElementById("btnTheme").src = sun;
-      document.getElementById("divSideMenu").className = lightSideMenu;
-    } else {
-      document.getElementById("divSideMenu").className = darkSideMenu;
-      document.getElementById("btnTheme").src = moon;
-    }
-  }
 
   return (
-    <div className={darkSideMenu} id="divSideMenu">
+    <div className={theme === 'light' ? lightSideMenu : darkSideMenu} id="divSideMenu">
       <button>
-        <img src={profile} alt="Profile Info" className="h-9" />
+        <img src={profile} alt="Profile Info" className="h-9 fill-gray-50" />
       </button>
-      <button
-        onClick={() => {
-          switchTheme();
-          switchBtnTheme();
-        }}
-      >
-        <img src={moon} className="h-9" id="btnTheme" />
+      <button onClick={switchTheme}>
+        <img src={theme === 'light' ? sun : moon} className="h-9" id="btnTheme" />
       </button>
       <button onClick={switchLanguage}>
         <img src={esFlag} className="h-9" id="btnFlag" />
