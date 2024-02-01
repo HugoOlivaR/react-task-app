@@ -4,12 +4,27 @@ import { TaskForm } from "./components/TaskForm";
 import { useState, useEffect } from "react";
 import SideMenu from "./components/SideMenu";
 import { LangContext } from "./config/LangContext";
+import { ProfileContext } from "./config/profileContext";
 import { ThemeContext } from "./config/ThemeContext";
 import {darkMain, lightMain} from './style/theme';
+import ProfileCard from './components/ProfileCard';  
 
 function App() {
   const [lang, setLang] = useState("es");
+  var [profileCardHandler, setProfileCardHandler] = useState(false);
   var [theme, setTheme] = useState("dark");
+
+  if(profileCardHandler === true){
+    alert("hola")
+  }
+
+  const profileFunction = () => {
+    if(profileCardHandler === true){
+      setProfileCardHandler(false)
+    }else{
+      setProfileCardHandler(true)
+    }
+  }
 
   const switchTheme = () => {
     if(theme === "dark"){
@@ -51,7 +66,10 @@ function App() {
                 <TaskForm createTask={createTask} theme={theme} />
               </div>
               <nav className="col-span-1">
-                <SideMenu switchTheme={switchTheme}/>
+                <SideMenu switchTheme={switchTheme} profileFunction={profileFunction}/>
+                <ProfileContext.Provider value={{profileCardHandler, setProfileCardHandler}}>
+                  <ProfileCard profileCardHandler={profileCardHandler} />
+                </ProfileContext.Provider>
               </nav>
             </header>
             <TaskList tasks={tasks} deleteTask={deleteTask} theme={theme} />

@@ -4,7 +4,7 @@ import { LangContext } from "../config/LangContext";
 import { darkSideMenu, lightSideMenu } from "../style/theme";
 import { ThemeContext } from "../config/ThemeContext";
 
-const SideMenu = ({switchTheme}) => {
+const SideMenu = ({switchTheme, profileFunction}) => {
   var [theme] = useContext(ThemeContext);
   var { lang, setLang } = useContext(LangContext);
 
@@ -20,7 +20,7 @@ const SideMenu = ({switchTheme}) => {
 
   return (
     <div className={theme === 'light' ? lightSideMenu : darkSideMenu} id="divSideMenu">
-      <button>
+      <button onClick={profileFunction}>
         <img src={theme === 'light' ? darkprofile : lightprofile} alt="Profile Info" className="h-9 fill-gray-50" />
       </button>
       <button onClick={switchTheme}>
