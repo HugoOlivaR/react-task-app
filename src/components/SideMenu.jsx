@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { esFlag, usFlag, moon, profile, sun } from "../assets";
+import React, { useContext } from "react";
+import { esFlag, usFlag, moon, darkprofile, lightprofile, sun } from "../assets";
 import { LangContext } from "../config/LangContext";
 import { darkSideMenu, lightSideMenu } from "../style/theme";
 import { ThemeContext } from "../config/ThemeContext";
@@ -21,7 +21,7 @@ const SideMenu = ({switchTheme}) => {
   return (
     <div className={theme === 'light' ? lightSideMenu : darkSideMenu} id="divSideMenu">
       <button>
-        <img src={profile} alt="Profile Info" className="h-9 fill-gray-50" />
+        <img src={theme === 'light' ? darkprofile : lightprofile} alt="Profile Info" className="h-9 fill-gray-50" />
       </button>
       <button onClick={switchTheme}>
         <img src={theme === 'light' ? sun : moon} className="h-9" id="btnTheme" />
